@@ -8,23 +8,7 @@ define([
 				
 				function($scope) {
 
-					$scope.todoItems = [
-						{ 
-							item: 'bustle', 
-							status: 'Not Started',
-							statusCode: 0
-						},
-						{ 
-							item: 'paper work', 
-							status: 'In Progress',
-							statusCode: 0
-						},
-						{ 
-							item: 'dishes', 
-							status: 'Complete',
-							statusCode: 0
-						}
-					];
+					$scope.todoItems = [];
 
 				}
 			]

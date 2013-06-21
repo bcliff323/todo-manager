@@ -7,7 +7,11 @@ define([
 				'$scope',
 				
 				function($scope) {
-					$scope.name = 'image';
+					$scope.todoItems = $scope.$parent.todoItems;
+
+					$scope.removeItem = function(index) {
+						$scope.todoItems.splice(index, 1);
+					};
 				}
 			]
 		);

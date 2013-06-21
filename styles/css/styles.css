@@ -1,8 +1,17 @@
 .list-view {
  	padding-top: 25px;
 }
+.m10 {
+	margin:10px;
+}
 .mb10 {
  	margin-bottom: 10px;
+}
+.mr10 {
+	margin-right: 10px;
+}
+.mt10 {
+	margin-top:10px;
 }
 .m25 {
  	margin: 25px;
@@ -10,8 +19,21 @@
 .mb25 {
  	margin-bottom: 25px;
 }
+.mt25 {
+ 	margin-top: 25px;
+}
 .m0 {
 	margin:0;
+}
+.mb0 {
+	margin-bottom:0;
+}
+.p4 {
+	padding: 4px;
+}
+
+button.btn.mt5 {
+	margin-top:5px 0 0 0 !important;
 }
 
 .main {
@@ -19,6 +41,14 @@
 	float:none !important;
 }
 
+.main li {
+	list-style: none;
+}
+
 .disable {
 	opacity: .4 !important;
+}
+
+.hide {
+	display:none;
 }

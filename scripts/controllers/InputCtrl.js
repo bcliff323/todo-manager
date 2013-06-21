@@ -7,7 +7,17 @@ define([
 				'$scope',
 				
 				function($scope) {
-					$scope.name = 'image';
+					$scope.newItem = '';
+
+					$scope.addNewItem = function() {
+						if($scope.newItem !== '') { 
+							$scope.$parent.todoItems.unshift({
+								item: $scope.newItem,
+								statusCode: 0
+							});
+							$scope.newItem = '';
+						}
+					};
 				}
 			]
 		);
