@@ -8,7 +8,7 @@ define([
 				'$routeParams',
 				
 				function($scope, $routeParams) {
-					$scope.todoListName = $scope.$parent.todoList.list;
+					$scope.todoLists = $scope.$parent.todoLists;
 				}
 			]
 		);

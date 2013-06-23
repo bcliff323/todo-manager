@@ -11,7 +11,7 @@ define([
 
 					$scope.addNewItem = function() {
 						if($scope.newItem !== '') { 
-							$scope.$parent.todoList.details.unshift({
+							$scope.$parent.todoLists[0].details.unshift({
 								item: $scope.newItem,
 								statusCode: 0
 							});

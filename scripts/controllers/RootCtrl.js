@@ -7,15 +7,35 @@ define([
 				'$scope', 
 				
 				function($scope) {
-					$scope.todoList = {
-						list: 'Home',
-						details: [
-							{
-								item: 'placeholder',
-								statusCode: 1
-							}
-						]
-					};
+					$scope.todoLists = [
+						{
+							list: 'Home',
+							details: [
+								{
+									item: 'placeholder',
+									statusCode: 1
+								}
+							]
+						},
+						{
+							list: 'About',
+							details: [
+								{
+									item: 'placeholder',
+									statusCode: 1
+								}
+							]
+						},
+						{
+							list: 'Another',
+							details: [
+								{
+									item: 'placeholder',
+									statusCode: 1
+								}
+							]
+						}
+					];
 				}
 			]
 		);
