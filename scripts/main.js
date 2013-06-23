@@ -21,7 +21,8 @@ require([
     'controllers/RootCtrl',
     'controllers/InputCtrl',
     'controllers/ListCtrl',
-    'controllers/NavCtrl'
+    'controllers/NavCtrl',
+    'services/Lists'
     ],
     function(angular, app, domReady) {
         domReady(function() {

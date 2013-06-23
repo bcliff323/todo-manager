@@ -5,37 +5,10 @@ define([
 		controllers.controller('RootCtrl', 
 			[
 				'$scope', 
+				'Lists',
 				
-				function($scope) {
-					$scope.todoLists = [
-						{
-							list: 'Home',
-							details: [
-								{
-									item: 'placeholder',
-									statusCode: 1
-								}
-							]
-						},
-						{
-							list: 'About',
-							details: [
-								{
-									item: 'placeholder',
-									statusCode: 1
-								}
-							]
-						},
-						{
-							list: 'Another',
-							details: [
-								{
-									item: 'placeholder',
-									statusCode: 1
-								}
-							]
-						}
-					];
+				function($scope, Lists) {
+					$scope.todoLists = Lists.query();
 				}
 			]
 		);
