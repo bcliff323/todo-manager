@@ -6,13 +6,28 @@ define([
     'directives/directives'
     ], 
     function (angular) {
-        return angular.module('RootApp', 
+        var app = angular.module('RootApp', 
             [
                 'controllers', 
                 'services',
                 'filters', 
                 'directives'
             ]
-        );
+        )
+        .config(function($routeProvider){
+            $routeProvider
+                .when('/',
+                    { 
+                        templateUrl: 'views/list.html',
+                        controller: 'ListCtrl'
+                    })
+                .when('/lists/:name',
+                    {
+                        templateUrl: 'views/list.html',
+                        controller: 'ListCtrl'
+                    });
+        });
+
+        return app;
     }
 );

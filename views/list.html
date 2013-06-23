@@ -1,0 +1,27 @@
+<div class="row-fluid">
+	<ul class="span12 main">
+		<li class="mt25" ng-repeat="todo in todoItems">
+			<span>
+				<span class="row-fluid">
+					<span class="span11 well well-small p4 m10"
+							ng-bind="todo.item"
+							ng-class="{'disable':todo.statusCode == 2}"></span>
+					<button class="btn mt10"
+							 ng-class="{'hide':todo.statusCode != 2}"
+							 ng-click="removeItem($index)">
+						<i class="icon-remove"></i>
+					</button>
+				</span>
+				<a class="label" 
+					ng-class="{'label-info':todo.statusCode == 0}"
+					ng-click="todo.statusCode = 0">Not Started</a>
+				<a class="label" 
+					ng-class="{'label-info':todo.statusCode == 1}"
+					ng-click="todo.statusCode = 1">In Progress</a>
+				<a class="label" 
+					ng-class="{'label-info':todo.statusCode == 2}"
+					ng-click="todo.statusCode = 2">Complete</a>
+			</span>
+		</li>
+	</ul>
+</div>

@@ -7,7 +7,7 @@ define([
 				'$scope',
 				
 				function($scope) {
-					$scope.todoItems = $scope.$parent.todoItems;
+					$scope.todoItems = $scope.$parent.todoList.details;
 
 					$scope.removeItem = function(index) {
 						$scope.todoItems.splice(index, 1);
