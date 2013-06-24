@@ -9,6 +9,7 @@ define([
 				
 				function($scope, Lists) {
 					$scope.todoLists = Lists.query();
+					$scope.activeList = $scope.todoLists[0];
 				}
 			]
 		);

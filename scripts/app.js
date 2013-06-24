@@ -21,7 +21,7 @@ define([
                         templateUrl: 'views/list.html',
                         controller: 'ListCtrl'
                     })
-                .when('/lists/:name',
+                .when('/:name',
                     {
                         templateUrl: 'views/list.html',
                         controller: 'ListCtrl'

@@ -7,8 +7,17 @@
 .mb10 {
  	margin-bottom: 10px;
 }
+.mb30 {
+ 	margin-bottom: 30px;
+}
 .mr10 {
 	margin-right: 10px;
+}
+.ml15 {
+	margin-left:15px;
+}
+.ml10 {
+	margin-left: 5px;
 }
 .mt10 {
 	margin-top:10px;
@@ -55,3 +64,7 @@ button.btn.mt5 {
 .hide {
 	display:none;
 }
+
+.inProgress {
+	background-color:#d9edf7;
+	border-color:#d9edf7;
