@@ -18,7 +18,7 @@ define([
 						for(var i=0, len = lists.length; i < len; i++) {
 							if(lists[i].list === route) {
 								$scope.$parent.activeList = lists[i];
-							};
+							}
 						}
 					};
 				}
