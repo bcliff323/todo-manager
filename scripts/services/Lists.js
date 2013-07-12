@@ -17,24 +17,6 @@ define([
 										statusCode: 1
 									}
 								]
-							},
-							{
-								list: 'About',
-								details: [
-									{
-										item: 'placeholder2',
-										statusCode: 0
-									}
-								]
-							},
-							{
-								list: 'Another',
-								details: [
-									{
-										item: 'placeholder3',
-										statusCode: 2
-									}
-								]
 							}
 						];
 					};

@@ -1,3 +1,12 @@
+.fl {
+	float:left;
+}
+.cf {
+	clear:both;
+}
+.dib {
+	display:inline-block;
+}
 .list-view {
  	padding-top: 25px;
 }
@@ -43,6 +52,18 @@
 .p4 {
 	padding: 4px;
 }
+.p10 {
+	padding: 10px;
+}
+.p5 {
+	padding:5px;
+}
+.rm {
+	background-position: -307px 5px;
+	vertical-align: top;
+	opacity: .7;
+	cursor: pointer;
+}
 
 button.btn.mt5 {
 	margin-top:5px 0 0 0 !important;
@@ -64,7 +85,7 @@ button.btn.mt5 {
 .hide {
 	visibility:false !important;
 }
-
 .inProgress {
 	background-color:#d9edf7;
 	border-color:#d9edf7;
+}
