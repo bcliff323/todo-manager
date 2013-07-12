@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Angular App</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="styles/css/bootstrap.css">
 	<link rel="stylesheet" href="styles/css/bootstrap-responsive.min.css">
 	<link rel="stylesheet" href="styles/css/styles.css">
@@ -17,6 +18,15 @@
 							ng-click="setRoute(todoList.list)">Home</a>
 					</li>
 				</ul>
+				<input type="text"
+					class="input-block-level hide"
+					placeholder="List name"
+					ng-model="newListName"
+					ng-show="showInput">
+				<button class="addList btn btn-block"
+					ng-click="addNewList()">
+					Start a new list
+				</button>
 			</div>
 			<div class="span9" ng-controller="InputCtrl">
 				<div>

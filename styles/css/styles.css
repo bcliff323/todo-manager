@@ -62,7 +62,7 @@ button.btn.mt5 {
 }
 
 .hide {
-	display:none;
+	visibility:false !important;
 }
 
 .inProgress {

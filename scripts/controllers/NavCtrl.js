@@ -9,6 +9,8 @@ define([
 				
 				function($scope, $location) {
 					$scope.todoLists = $scope.$parent.todoLists;
+					$scope.newListName = '';
+					$scope.showInput = false;
 
 					$scope.setRoute = function(route) {
 						var lists = $scope.todoLists;
@@ -20,6 +22,24 @@ define([
 								$scope.$parent.activeList = lists[i];
 							}
 						}
+					};
+
+					$scope.addNewList = function() {
+						toggleInputVisibility();
+						
+						if($scope.newListName !== '') {
+							$scope.$parent.todoLists.push({
+								list: $scope.newListName,
+								details: []
+							});
+							$scope.setRoute($scope.newListName);
+							$scope.newListName = '';
+							$scope.showInput = false;
+						}
+					};
+
+					var toggleInputVisibility = function() {
+						$scope.showInput = !$scope.showInput;
 					};
 				}
 			]
