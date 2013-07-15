@@ -6,55 +6,42 @@ define([
 			[
 				function(){
 					var Lists = {};
+					Lists.data = [];
 
 					Lists.query = function() {
-						return [
-							{
-								list: 'One',
-								details: [
-									{
-										item: 'One',
-										statusCode: 1
-									}
-								]
-							},
-							{
-								list: 'Two',
-								details: [
-									{
-										item: 'Two',
-										statusCode: 1
-									}
-								]
-							},
-							{
-								list: 'Three',
-								details: [
-									{
-										item: 'Three',
-										statusCode: 1
-									}
-								]
-							},
-							{
-								list: 'Four',
-								details: [
-									{
-										item: 'Four',
-										statusCode: 1
-									}
-								]
-							},
-							{
-								list: 'Five',
-								details: [
-									{
-										item: 'Five',
-										statusCode: 1
-									}
-								]
+						if(supportsLocalStorage) {
+							Lists.data = getData();
+							return Lists.data;
+						} else {
+							return Lists.data;
+						}
+					};
+
+					Lists.update = function() {
+						localStorage.setItem('tdmanager', JSON.stringify(Lists.data));
+					};
+
+					Lists.getIndex = function(path) {
+						var path = path.replace('/','');
+
+						for(var i = 0, len = Lists.data.length; i < len; i++) {
+							if(Lists.data[i].list === path) {
+								return i;
+								break;
 							}
-						];
+						}
+					};
+
+					var getData = function() {
+						if(localStorage.getItem('tdmanager')) {
+							return JSON.parse(localStorage.getItem('tdmanager'));
+						} else {
+							return Lists.data;
+						}
+					};
+
+					var supportsLocalStorage = function() {
+						return ('localStorage' in window && window.localStorage !== null);
 					};
 
 					return Lists;

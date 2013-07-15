@@ -10,7 +10,7 @@ define([
 				
 				function($scope, Lists, $location) {
 					$scope.todoLists = Lists.query();
-					$scope.activeList = $scope.todoLists[0] || {};
+					$scope.activeList = $scope.todoLists[Lists.getIndex($location.path())] || {};
 
 					$scope.setRoute = function(route) {
 						var lists = $scope.todoLists;
@@ -22,6 +22,12 @@ define([
 								$scope.activeList = lists[i];
 							}
 						}
+
+						$scope.save();
+					};
+
+					$scope.save = function() {
+						Lists.update();
 					};
 				}
 			]
