@@ -15,7 +15,7 @@
 				<ul class="nav nav-tabs nav-stacked">
 					<li ng-repeat="todoList in todoLists">
 						<a ng-bind="todoList.list"
-							ng-click="setRoute(todoList.list)">Home</a>
+							ng-click="setRoute(todoList.list)"></a>
 					</li>
 				</ul>
 				<form class="m0">
@@ -26,11 +26,12 @@
 						ng-show="showInput">
 					<button class="addList btn btn-block"
 						ng-click="addNewList()">
-						Start a new list
+						Start a new list!
 					</button>
 				</form>
 			</div>
-			<div class="span9" ng-controller="InputCtrl">
+			<div class="span9" ng-controller="InputCtrl"
+				ng-show="activeList.list.length">
 				<div class="cf">
 					<h1 class="dib"
 						ng-bind="activeList.list"></h1>

@@ -10,7 +10,7 @@ define([
 				
 				function($scope, Lists, $location) {
 					$scope.todoLists = Lists.query();
-					$scope.activeList = $scope.todoLists[0];
+					$scope.activeList = $scope.todoLists[0] || {};
 
 					$scope.setRoute = function(route) {
 						var lists = $scope.todoLists;
