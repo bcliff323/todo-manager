@@ -21,13 +21,12 @@ define([
 						localStorage.setItem('tdmanager', JSON.stringify(Lists.data));
 					};
 
-					Lists.getIndex = function(path) {
-						var path = path.replace('/','');
+					Lists.getIndex = function(p) {
+						var path = p.replace('/','');
 
 						for(var i = 0, len = Lists.data.length; i < len; i++) {
 							if(Lists.data[i].list === path) {
 								return i;
-								break;
 							}
 						}
 					};
