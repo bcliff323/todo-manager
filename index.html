@@ -30,15 +30,15 @@
 					</button>
 				</form>
 			</div>
-			<div class="span9" ng-controller="InputCtrl"
-				ng-show="activeList.list.length">
-				<div class="cf">
+			<div class="span9" ng-controller="InputCtrl">
+				<div class="cf"
+					ng-show="activeList.list.length">
 					<h1 class="dib"
 						ng-bind="activeList.list"></h1>
 					<i class="icon-remove p5 rm"
 						ng-click="removeActiveList()"></i>
 				</div>
-				<div>
+				<div ng-show="activeList.list.length">
 					<form class="m0">
 						<span class="span8">
 							<input type="text" 

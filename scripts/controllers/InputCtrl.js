@@ -24,12 +24,18 @@ define([
 							if($scope.$parent.todoLists[i].list === $scope.$parent.activeList.list) {
 								$scope.$parent.todoLists.splice(i, 1);
 
-								if($scope.$parent.todoLists[i] !== undefined) {
-									$scope.$parent.activeList = $scope.$parent.todoLists[i];
-									$scope.$parent.setRoute($scope.$parent.todoLists[i].list);
+								if($scope.$parent.todoLists[i-1] !== undefined) {
+									$scope.$parent.activeList = $scope.$parent.todoLists[i-1];
+									$scope.$parent.setRoute($scope.$parent.todoLists[i-1].list);
 								} else {
-									$scope.$parent.activeList = $scope.$parent.todoLists[i-1] || {};
-									$scope.$parent.setRoute('/');
+									if($scope.$parent.todoLists.length) {
+										$scope.$parent.activeList = $scope.$parent.todoLists[i];
+										$scope.$parent.setRoute($scope.$parent.todoLists[i].list);
+									} else {
+										$scope.$parent.activeList = {};
+										$scope.$parent.setRoute('/');
+									}
+									
 								}
 								break;
 							}

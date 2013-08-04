@@ -14,7 +14,7 @@ define([
 
 					$scope.setRoute = function(route) {
 						var lists = $scope.todoLists;
-
+						
 						$location.path(route);
 
 						for(var i=0, len = lists.length; i < len; i++) {
@@ -29,6 +29,11 @@ define([
 					$scope.save = function() {
 						Lists.update();
 					};
+
+					if($scope.todoLists[0] !== undefined) {
+						$scope.setRoute($scope.todoLists[0].list);
+					}
+					
 				}
 			]
 		);
