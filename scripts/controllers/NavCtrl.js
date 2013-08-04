@@ -11,14 +11,6 @@ define([
 					$scope.newListName = '';
 					$scope.showInput = false;
 
-					$scope.getCSSClass = function() {
-						if($scope.todoLists.length) {
-							return 'span3';
-						} else {
-							return 'span3 offset5';
-						}
-					};
-
 					$scope.addNewList = function() {
 						toggleInputVisibility();
 

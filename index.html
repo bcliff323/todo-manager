@@ -12,9 +12,9 @@
 	<div class="container-fluid" 
 		ng-controller="RootCtrl">
 		<div class="row-fluid mt25">
-			<div class="mb30" 
+			<div class="mb30 span3" 
 				ng-controller="NavCtrl"
-				ng-class="getCSSClass()">
+				ng-class="{ 'offset5' : !todoLists.length }">
 				<ul class="nav nav-tabs nav-stacked">
 					<li ng-repeat="todoList in todoLists">
 						<a ng-bind="todoList.list"
