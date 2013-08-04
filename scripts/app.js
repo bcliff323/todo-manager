@@ -17,8 +17,8 @@ define([
             $routeProvider
                 .when('/',
                     { 
-                        templateUrl: 'views/blank.html',
-                        controller: 'HomeCtrl'
+                        templateUrl: 'views/list.html',
+                        controller: 'ListCtrl'
                     })
                 .when('/:name',
                     {

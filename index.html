@@ -9,9 +9,12 @@
 	<link rel="stylesheet" href="styles/css/styles.css">
 </head>
 <body>
-	<div class="container-fluid" ng-controller="RootCtrl">
+	<div class="container-fluid" 
+		ng-controller="RootCtrl">
 		<div class="row-fluid mt25">
-			<div class="span3 mb30" ng-controller="NavCtrl">
+			<div class="mb30" 
+				ng-controller="NavCtrl"
+				ng-class="getCSSClass()">
 				<ul class="nav nav-tabs nav-stacked">
 					<li ng-repeat="todoList in todoLists">
 						<a ng-bind="todoList.list"
@@ -30,15 +33,16 @@
 					</button>
 				</form>
 			</div>
-			<div class="span9" ng-controller="InputCtrl">
-				<div class="cf"
-					ng-show="activeList.list.length">
+			<div class="span9" 
+				ng-controller="InputCtrl"
+				ng-show="activeList.list.length">
+				<div class="cf">
 					<h1 class="dib"
 						ng-bind="activeList.list"></h1>
 					<i class="icon-remove p5 rm"
 						ng-click="removeActiveList()"></i>
 				</div>
-				<div ng-show="activeList.list.length">
+				<div>
 					<form class="m0">
 						<span class="span8">
 							<input type="text" 
