@@ -18,9 +18,12 @@ define([
 
                     /**
                      * Removes items from model when the remove button is clicked.
+                     *
+                     * @param {Number} index - The index of the item to remove.
                      */
                     $scope.removeItem = function(index) {
                         $scope.todoItems.splice(index, 1);
+                        $scope.$parent.save();
                     };
                 }
             ]

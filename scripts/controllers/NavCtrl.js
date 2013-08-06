@@ -16,7 +16,7 @@ define([
                 function($scope) {
                     $scope.todoLists = $scope.$parent.todoLists;
                     $scope.newListName = '';
-                    $scope.showInput = false;
+                    $scope.showInput = $scope.todoLists.length ? false : true;
 
                     /**
                      * Adds a new list object to the model.

@@ -16,7 +16,7 @@ define([
                     $scope.newItem = '';
 
                     /**
-                     * 
+                     * Adds a new todo item to the model. Saves to local storage.
                      */
                     $scope.addNewItem = function() {
                         if($scope.newItem !== '') { 
@@ -24,10 +24,27 @@ define([
                                 item: $scope.newItem,
                                 statusCode: 0
                             });
+                            $scope.$parent.save();
                             $scope.newItem = '';
                         }
                     };
 
+                    /**
+                     * Changes the status of a todo item. Saves updates to the
+                     * model.
+                     *
+                     * @param {Object} todo - The todo item object
+                     * @param {Number} index - The new status code
+                     */
+                    $scope.changeStatus = function(todo, index) {
+                        todo.statusCode = index;
+                        $scope.$parent.save();
+                    };
+
+                    /**
+                     * Removes the active list from the model. Sets the route
+                     * and saves to local storage.
+                     */
                     $scope.removeActiveList = function() {
                         for(var i = 0, len = $scope.$parent.todoLists.length; i < len; i++) {
                             if($scope.$parent.todoLists[i].list === $scope.$parent.activeList.list) {
