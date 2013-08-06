@@ -16,7 +16,6 @@ require([
     'app',
     'domReady',
     'controllers/RootCtrl',
-    'controllers/HomeCtrl',
     'controllers/InputCtrl',
     'controllers/ListCtrl',
     'controllers/NavCtrl',
