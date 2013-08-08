@@ -1,8 +1,23 @@
+.bgw {
+	background: #fff;
+}
+.bgb {
+	background: #333;
+}
+.bgg {
+	background: #f3f3f3;
+}
+.rcorners {
+	border-radius: 4px;
+}
 .fl {
 	float:left;
 }
 .cf {
 	clear:both;
+}
+.tac {
+	text-align: center;
 }
 .dib {
 	display:inline-block;
@@ -55,6 +70,9 @@
 .p10 {
 	padding: 10px;
 }
+.p20 {
+	padding: 20px;
+}
 .p5 {
 	padding:5px;
 }
@@ -63,6 +81,12 @@
 	vertical-align: top;
 	opacity: .7;
 	cursor: pointer;
+}
+.size-header {
+	font-size:42px;
+}
+.mh30 {
+	min-height: 30px;
 }
 
 button.btn.mt5 {
