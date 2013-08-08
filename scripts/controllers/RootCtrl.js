@@ -48,11 +48,41 @@ define([
                         Lists.update();
                     };
 
-                    // Set the route to the first available list on page load.
-                    if($scope.todoLists[0] !== undefined) {
-                        $scope.setRoute($scope.todoLists[0].list);
+                    /**
+                     * Searches the todo lists for a list matching the route
+                     *
+                     * @param { String } route - The route path from the URL
+                     * @returns { Boolean } True, if the route matches a list,
+                     *      false otherwise.
+                     */
+                    var matchList = function(route) {
+                        var routeName = route.replace('/','');
+
+                        for(var i = 0, len = $scope.todoLists.length; i < len; i++) {
+                            if($scope.todoLists[i].list === routeName) {
+                                return true;
+                            }
+                        }
+
+                        return false;
+                    };
+
+                    /**
+                     * If a route is specified on page load, and the value
+                     * matches a todo list, load that list in the List view.
+                     * Otherwise, change the route to the first available list.
+                     */
+                    if($location.path().length > 1) {
+                        if(matchList($location.path())) {
+                            $scope.setRoute($location.path());
+                        } else {
+                            $scope.setRoute($scope.todoLists[0].list);
+                        }
+                    } else {
+                        if($scope.todoLists[0] !== undefined) {
+                            $scope.setRoute($scope.todoLists[0].list);
+                        }
                     }
-                    
                 }
             ]
         );
