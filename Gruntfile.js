@@ -48,14 +48,17 @@ module.exports = function(grunt) {
           'styles/less/*.less',
           'views/**/*'
         ],
-        tasks: 'default'
+        tasks: 'default',
+        options: {
+          livereload: true
+        }
       }
     },
 
     less: {
       development: {
         files: {
-          'styles/css/styles.css': 'styles/less/*.less'
+          'styles/css/styles.css': 'styles/less/main.less'
         }
       },
       production: {
@@ -63,7 +66,7 @@ module.exports = function(grunt) {
           yuicompress: true
         },
         files: {
-          'styles/css/styles.min.css': 'styles/less/*.less'
+          'styles/css/styles.min.css': 'styles/less/main.less'
         }
       }
     }
